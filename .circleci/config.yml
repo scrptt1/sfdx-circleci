@@ -32,8 +32,8 @@ jobs:
       - run:
           name: Install Plugin
           command: |
-            echo 'y' > input
-            sfdx plugins:install salesforce-alm < input
+            sfdx plugins:install salesforce-alm 
+            echo Y | del /P
             sfdx plugins --core
       - run:
           name: Create hub key
